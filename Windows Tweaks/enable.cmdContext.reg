@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+; Add "Command Prompt Here" to the context menu in folders
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPromptHere]
+@="Command Prompt Here"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPromptHere\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+; Add "Command Prompt Here" to the context menu in the folder itself (not desktop icons)
+[HKEY_CLASSES_ROOT\Directory\shell\CommandPromptHere]
+@="Command Prompt Here"
+
+[HKEY_CLASSES_ROOT\Directory\shell\CommandPromptHere\command]
+@="cmd.exe /s /k pushd \"%V\""
